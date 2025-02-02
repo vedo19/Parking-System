@@ -1,0 +1,47 @@
+/* Adding scaling effect for news items */
+.scale-up-news {
+    animation: scaleUp 1s ease-out forwards;
+  }
+  
+  /* Define the keyframes for the scaling effect */
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 1s ease-in-out;
+  }
+
+  .news-item {
+    animation: scaleUp 0.5s ease-out, fade-in 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  
+  .news-item:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .news-item:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  
+  .news-item:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  
